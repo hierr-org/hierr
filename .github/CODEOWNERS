@@ -1,0 +1,8 @@
+# Frontend ownership
+/frontend/**   @aaiaa-1
+
+# Backend ownership
+/backend/**    @aaiaa-1
+
+# Infra ownership
+/infra/**      @aaiaa-1
