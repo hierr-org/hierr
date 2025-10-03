@@ -3,6 +3,6 @@
   "compilerOptions": {
     // app-specific tweaks if needed
   },
-  "include": ["src"],
+  "include": ["src", "src/lib", "components"],
   "exclude": ["node_modules", "dist", "build"]
 }
