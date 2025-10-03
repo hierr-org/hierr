@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "frontend/**/*.{ts,tsx,js,jsx,json,md,css,scss}": [
+      "prettier --write"
+    ],
+    "frontend/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ],
+    "backend/**/*.java": [
+      "bash -lc 'cd backend && ./mvnw -q spotless:apply'"
+    ]
+  }
+}
