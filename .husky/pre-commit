@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+
+echo "▶ frontend: typecheck"
+( cd frontend && npm run typecheck ) || exit 1
+
+echo "▶ repo: lint-staged (frontend + backend)"
+npx lint-staged || exit 1
+
+echo "▶ backend: compile (skip tests)"
+( cd backend && ./mvnw -q -DskipTests compile ) || exit 1
