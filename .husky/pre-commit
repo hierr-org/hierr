@@ -9,4 +9,5 @@ echo "▶ repo: lint-staged (frontend + backend)"
 npx lint-staged || exit 1
 
 echo "▶ backend: compile (skip tests)"
+ 
 ( cd backend && ./mvnw -q -DskipTests compile ) || exit 1
